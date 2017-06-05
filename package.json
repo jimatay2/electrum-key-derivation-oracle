@@ -1,0 +1,39 @@
+{
+  "name": "electrum-key-derivation-oracle",
+  "version": "1.0.0",
+  "description": "A REST Api to get addresses for electrum v1.x public master keys ",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha -t 5000 -u tdd --compilers js:babel-core/register --require babel-polyfill \"./{,!(node_modules)/**/}*.test.js\"",
+    "dev": "mocha --watch -t 5000 -u tdd --compilers js:babel-core/register --require babel-polyfill \"./{,!(node_modules)/**/}*.test.js\"",
+    "build": "babel lib --out-dir build --copy-files --source-maps --ignore test.js --ignore test.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/blooks/electrum-key-derivation-oracle.git"
+  },
+  "author": "Hardfork UG (haftungsbeschränkt)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/blooks/electrum-key-derivation-oracle/issues"
+  },
+  "homepage": "https://github.com/blooks/electrum-key-derivation-oracle#readme",
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.24.1",
+    "babel-polyfill": "^6.23.0",
+    "babel-preset-env": "^1.5.1",
+    "babel-preset-latest": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "expect": "^1.20.2",
+    "mocha": "^3.4.2",
+    "supertest": "^3.0.0"
+  },
+  "dependencies": {
+    "bitcore": "^0.1.41",
+    "bitcore-electrum": "0.0.5",
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "lodash": "^4.17.4"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "presets": ["latest","stage-2", ["env", {
+      "targets": {
+        "node": "0.10"
+      }
+    }]
+  ],
+  "ignore": [
+    "node_modules/"
+  ]
+}
