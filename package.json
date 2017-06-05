@@ -2,11 +2,12 @@
   "name": "electrum-key-derivation-oracle",
   "version": "1.0.0",
   "description": "A REST Api to get addresses for electrum v1.x public master keys ",
-  "main": "index.js",
+  "main": "./build/app.js",
   "scripts": {
     "test": "mocha -t 5000 -u tdd --compilers js:babel-core/register --require babel-polyfill \"./{,!(node_modules)/**/}*.test.js\"",
     "dev": "mocha --watch -t 5000 -u tdd --compilers js:babel-core/register --require babel-polyfill \"./{,!(node_modules)/**/}*.test.js\"",
-    "build": "babel lib --out-dir build --copy-files --source-maps --ignore test.js --ignore test.json"
+    "build": "babel lib --out-dir build --copy-files --source-maps --ignore test.js --ignore test.json",
+    "start": "node ./build/start.js"
   },
   "repository": {
     "type": "git",
